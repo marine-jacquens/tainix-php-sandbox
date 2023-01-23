@@ -14,6 +14,17 @@ Html::debug($stop, '$stop');
 
 // CODE DU CHALLENGE ------------------
 
+$total = [];
+
+
+for ($i = 0; $i < count($kms); $i++) {
+
+    $group = ($stop-$kms[$i])*$runners[$i];
+    array_push($total, $group);
+
+}
+
+Html::debug(array_sum($total)+$stop);
 
 
 

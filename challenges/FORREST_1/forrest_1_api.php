@@ -20,8 +20,15 @@ foreach ($data as $name => $value) {
 
 // CODE DU CHALLENGE ------------------
 
+$total = [];
 
 
+for ($i = 0; $i < count($kms); $i++) {
+
+    $group = ($stop-$kms[$i])*$runners[$i];
+    array_push($total, $group);
+
+}
 
 // REPONSE ----------------------------
-// $game->output(['data' => ...]);
+$game->output(['data' => array_sum($total)+$stop]);
