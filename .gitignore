@@ -1,5 +1,5 @@
 vendor/
-challenges/
+# challenges/
 pest/
 phpunit/
 key.php
