@@ -12,8 +12,32 @@ Html::debug($objets, '$objets');
 
 // CODE DU CHALLENGE ------------------
 
+$capacite = $sac;
+
+rsort($objets);
+
+$objetsCount = count($objets);
+
+for ($i = 0; $i < 10 ; $i++) {
+
+    if ($objets[$i] <= $capacite) {
+        $capacite -= $objets[$i];
+    }
+
+}
+
+sort($objets);
+
+for ($i = 0; $i < 10 ; $i++) {
+
+    if ($objets[$i] <= $capacite) {
+        $capacite -= $objets[$i];
+    }
+
+}
 
 
+Html::debug($sac-$capacite);
 
 // REPONSE ATTENDUE -------------------
 Html::debug('579', 'Réponse attendue', 'success');
