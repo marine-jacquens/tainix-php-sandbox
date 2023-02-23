@@ -4,7 +4,7 @@ namespace Challenges\GOT_1;
 use Tainix\Html;
 
 // ECHANTILLON ------------------------
-$armee = 4726;
+$armee = 9265;
 
 Html::debug($armee, '$armee');
 
