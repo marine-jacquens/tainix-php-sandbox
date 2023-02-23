@@ -61,7 +61,7 @@ foreach ($planetes as $planete) {
 
         for ($a = 0; $a < $tableau_meteo_size; $a++) {
 
-            if (preg_match("/".$climat."/i", $tableau_meteo[$a])) {
+            if (trim($tableau_meteo[$a]) == $climat) {
 
                 $possibilites[$name] = $tableau_meteo[$a];
 
@@ -73,19 +73,17 @@ foreach ($planetes as $planete) {
 
 }
 
-foreach ($possibilites as $key => $value) {
+if (!empty($possibilites)) {
 
-    if (trim($value) == $climat) {
-
-        $reponse .= $key;
-
+    foreach ($possibilites as $key => $value) {
+    
+            $reponse .= $key;
+        
     }
-	
-}
 
-if ($reponse == "") {
+}else {
 
-	$reponse = "NOPLANET";
+    $reponse = "NOPLANET";
 
 }
 
