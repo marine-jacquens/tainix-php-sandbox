@@ -24,7 +24,7 @@ $totaux = [];
 
 foreach ($scores as $score) {
 
-    [$team_1, $team_2, $team_1_score, $team_2_score] = preg_split("/[_]/", $score);
+    [$team_1, $team_2, $team_1_score, $team_2_score] = preg_split("/_/", $score);
 
     if ($team_1_score == $team_2_score) {
 
