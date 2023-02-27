@@ -42,7 +42,7 @@ function addPoints($joueur, $scores)
 
 for ($i = 0; $i < $points_size; $i++) {
 
-    $scores[$points[$i]] += (addPoints($points[$i], $scores));
+    $scores[$points[$i]] += addPoints($points[$i], $scores);
  
     if ($scores[$points[$i]] > 40) {
         
